@@ -1,11 +1,11 @@
 version: '3.5'
 services:
-    sgm-web-api:
+    sgm-web:
         build:
             context: ./..
             dockerfile: .devcontainer/Dockerfile
         volumes:
-            - ./..:/sgm-web-api:cached
+            - ./..:/sgm-web:cached
         # Overrides default command so things don't shut down after the process ends.
         command: sleep infinity
         networks:
@@ -17,7 +17,7 @@ services:
 
     redis:
         image: redis:6
-        container_name: sgm-web-api-redis
+        container_name: sgm-web-redis
         ports:
             - 6333:6379
         networks:

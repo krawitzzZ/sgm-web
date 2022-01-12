@@ -4,7 +4,7 @@ FROM node:${NODE_IMAGE_VERSION}
 ENV TZ='Europe/Berlin'
 
 # create user and setup ssh
-ARG USERNAME=sgm-web-api
+ARG USERNAME=sgm-web
 ARG USER_UID=1001
 ARG USER_GID=$USER_UID
 
@@ -21,7 +21,7 @@ ARG INSTALL_ZSH="true"
 # [Option] Upgrade OS packages to their latest versions
 ARG UPGRADE_PACKAGES="true"
 
-WORKDIR /sgm-web-api
+WORKDIR /sgm-web
 
 # Install needed packages and setup non-root user. Use a separate RUN statement to add your own dependencies
 COPY .devcontainer/library-scripts/*.sh /tmp/library-scripts/

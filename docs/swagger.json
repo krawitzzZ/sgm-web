@@ -38,7 +38,7 @@
         }
     },
     "info": {
-        "title": "sgm-web-api",
+        "title": "sgm-web",
         "description": "static server and main API for web version of sgm app",
         "version": "1.0.0",
         "contact": {}

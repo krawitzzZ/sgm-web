@@ -1,7 +1,7 @@
 {
-  "name": "sgm-web-api",
-  "service": "sgm-web-api",
-  "workspaceFolder": "/sgm-web-api",
+  "name": "sgm-web",
+  "service": "sgm-web",
+  "workspaceFolder": "/sgm-web",
   "dockerComposeFile": [
     "docker-compose.yml"
   ],
@@ -35,6 +35,6 @@
   ],
   // Use 'postCreateCommand' to run commands after the container is created.
   // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
-  "remoteUser": "sgm-web-api",
+  "remoteUser": "sgm-web",
   "postCreateCommand": "npm ci"
 }
