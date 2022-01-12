@@ -1,0 +1,40 @@
+{
+  "name": "sgm-web-api",
+  "service": "sgm-web-api",
+  "workspaceFolder": "/sgm-web-api",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  // Set *default* container specific settings.json values on container create.
+  "settings": {
+    "currentPath.hideFileIcon": true,
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.defaultProfile.linux": "zsh"
+  },
+  // Add the IDs of extensions you want installed when the container is created.
+  "extensions": [
+    "ms-azuretools.vscode-docker",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "eg2.vscode-npm-script",
+    "christian-kohler.path-intellisense",
+    "kahole.magit",
+    "github.copilot",
+    "42crunch.vscode-openapi",
+    "fayras.simple-new-file",
+    "redhat.vscode-yaml",
+    "ezzak.current-path",
+    "pascalsenn.keyboard-quickfix",
+    "dominicvonk.auto-toggle-sidebar",
+    "ryuta46.multi-command"
+  ],
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  "forwardPorts": [
+    3003,
+    5432
+  ],
+  // Use 'postCreateCommand' to run commands after the container is created.
+  // Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+  "remoteUser": "sgm-web-api",
+  "postCreateCommand": "npm ci"
+}

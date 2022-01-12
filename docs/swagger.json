@@ -1,0 +1,51 @@
+{
+    "openapi": "3.0.0",
+    "paths": {
+        "/api/auth/login": {
+            "get": {
+                "operationId": "AuthController_login",
+                "summary": "",
+                "description": "Authenticate current user and generate JWT",
+                "parameters": [
+                    {
+                        "name": "x-api-version",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successfuly logged in",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    }
+                }
+            }
+        }
+    },
+    "info": {
+        "title": "sgm-web-api",
+        "description": "static server and main API for web version of sgm app",
+        "version": "1.0.0",
+        "contact": {}
+    },
+    "tags": [],
+    "servers": [],
+    "components": {
+        "schemas": {}
+    }
+}
